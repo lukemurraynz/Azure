@@ -27,7 +27,7 @@ Deletes all resource groups under the "my-management-group" management group tha
 
 .NOTES
 This script requires the Azure PowerShell module to be installed. It also requires Owner rights (or User Administrator role) in order to remove roles from a subscription. Make sure your rights are set to be inherited from a management group before running this script.
-This script was tested in Azure Automation PowerShell 7.2 (Preview).
+Make sure the Resource Group is protected by your 'Do Not Delete' tag, otherwise the Azure Automation account and runbook - will be deleted.
 This script is provided as-is with no warranties or guarantees. Use at your own risk. This is not intended to be a script to use in Production, mainly test envrionments, as this WILL CAUSE massive destruction and irretrievable data loss... You have been warned.
 
 .AUTHOR
