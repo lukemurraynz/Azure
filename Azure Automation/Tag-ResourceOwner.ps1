@@ -12,7 +12,7 @@ Import-Module Az.Resources
 $tagName = "Createdby"
 
 #Adjust to suit your management group, this is the top scope that the Script will run under
-$ManagementGroupID = 'LUKEGEEKNZ-MG'
+$ManagementGroupID = 'mg-landingzones'
 
 
 <# Connect using a Managed Service Identity #>
@@ -72,8 +72,7 @@ foreach ($subId in $subIds) {
 
             # If owner is null, stop the script
             if ($null -eq $owner) {
-                Write-Output "No owner found that matches an email address. Stopping script."
-                return
+                Write-Output "No owner found that matches an email address."
             }
             
             # Output owners
